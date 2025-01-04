@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import events from '../data/events';
-import noresult from '../assets/noResult.png'; // Import "no result" image
+import noresult from '../assets/noresult.png'; // Import "no result" image
 import EventModal from '../components/EventModal'; // Import the modal component
 import '../styles/EventList.css'; // Import CSS file
 import '../assets/discount.webp';
