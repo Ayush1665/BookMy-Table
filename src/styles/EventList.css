@@ -206,7 +206,9 @@ body {
   body {
     font-size: 14px;
   }
-
+  .no-result{
+    margin-top: 180px;
+  }
   .booktable {
     font-size: 1.0rem;
     top: 15px;
