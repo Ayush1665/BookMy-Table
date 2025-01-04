@@ -1,0 +1,197 @@
+/* General Modal Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #1d2671, #c33764);
+  border-radius: 15px;
+  color: #ffffff;
+  padding: 25px 30px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 20px #ff33ff;
+  animation: scale-in 0.5s ease-in-out;
+  position: relative;
+}
+
+/* Header Styling */
+.modal-content h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ff66ff;
+  text-shadow: 0 0 5px #ff33ff, 0 0 10px #ff33ff;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
+}
+
+/* Amount Container */
+.amount-container,
+.coupon-container {
+  margin-bottom: 20px;
+}
+
+.amount-container p,
+.coupon-container p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #00ff99;
+}
+
+.coupon-container label {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+.coupon-container input {
+  width: 20%;
+  padding: 5px;
+  font-size: 0.6rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: #222;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.coupon-container input:focus {
+  box-shadow: 0 0 15px #ff33ff;
+}
+
+/* Payment Method Container */
+.payment-method-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.payment-method-container label {
+  font-size: 1.3rem;
+  color: #ff66ff;
+  margin-right: 10px;
+  font-weight: bold;
+}
+.modal-content .coupon-success {
+  color: #02f43a; /* Green color */
+  font-size: 0.8rem; /* Smaller text */
+}
+
+.modal-content .coupon-error {
+  color: #dc3545; /* Red color */
+  font-size: 0.8rem; /* Smaller text */
+}
+
+.payment-method-container select {
+  width: 35%;
+  padding: 5px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: #222;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.payment-method-container select:focus {
+  box-shadow: 0 0 15px #00ff99;
+}
+
+/* Buttons */
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+}
+
+.confirm-button,
+.cancel-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.confirm-button {
+  background: linear-gradient(90deg, #ff33ff, #00ff99);
+}
+
+.cancel-button {
+  background: linear-gradient(90deg, #ff0000, #ff6600);
+}
+
+.confirm-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 51, 255, 0.6), 0 0 15px rgba(0, 255, 153, 0.6);
+}
+
+.cancel-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 0, 0, 0.6), 0 0 15px rgba(255, 102, 0, 0.6);
+}
+
+/* Details Modal */
+.modal-content p {
+  font-size: 1.3rem;
+  color: #00ff99;
+  margin: 10px 0;
+}
+
+.modal-content p strong {
+  color: #ff66ff;
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  color: #ff66ff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease-in-out;
+}
+.modal-content .details{
+  font-size: 0.8rem;
+  color: #917c7c;
+  margin-top: 25px;
+}
+/* Animations */
+@keyframes scale-in {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

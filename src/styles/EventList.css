@@ -1,0 +1,258 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdf4e3; /* Warm and inviting background color */
+  color: #333;
+}
+/* Heading Styling */
+.booktable {
+  font-size: 2.5rem; /* Adjust the font size */
+  font-weight: 700; /* Bold */
+  color: linear-gradient(135deg, #FF7E5F, #FEB47B);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Text shadow for depth */
+  position: absolute; /* Position it absolutely */
+  top: -10px; /* Align it with the search bar */
+  left: 150px; /* Align it to the left of the container */
+  font-family: 'Raleway';
+}
+
+
+.event-list {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding-left: 20px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #8a2c2c; /* Warm red-brown shade */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+/* Search Bar Styling */
+.search-bar {
+  margin-bottom: 30px;
+}
+
+.search-bar input {
+  width: 30%;
+  margin-left:700px;
+  padding: 12px 20px;
+  border: 0px solid #00ffea;
+  border-radius: 16px;
+  outline: none;
+  font-family: Orbitron,sans-serif;
+  /* color:#00ffea; */
+  font-size: 20px;
+  transition: all 0.3s ease;
+  background-color: #fff6eb;
+  box-shadow: 0 5px 20px #00ffea33;
+  
+}
+
+.event-rating {
+  position: absolute; /* Position relative to the parent */
+  top: 305px; /* Adjust based on design preference */
+  right: 15px; /* Align to the right */
+  font-size: 12px;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+  background-color: rgb(38, 126, 62);
+  padding: 4px 6px; /* Add padding for better visibility */
+  border-radius: 15%; /* Rounded corners */
+  text-align: center;
+  z-index: 2; /* Ensure it stays above the hover background */
+}
+
+
+.search-bar input:focus {
+  border-color: #8a2c2c; /* Same color as heading */
+  box-shadow: 0 0 10px rgba(138, 44, 44, 0.5);
+  transform: scale(1.03); /* Slightly enlarge for focus effect */
+}
+
+.search-bar input:active {
+  transform: translateY(2px) scale(0.98); /* 3D pressed effect */
+  box-shadow: 0 0 5px rgba(138, 44, 44, 0.5);
+}
+
+/* Event Items Styling */
+.event-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+  gap:60px;
+  border: none;
+}
+
+.event-item {
+  position: relative;
+  background-color: #fdf4e3;
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  text-align:left ;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  overflow: hidden; /* To ensure the hover background effect stays within the card */
+}
+
+.event-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(138, 44, 44, 0.1), rgba(255, 200, 150, 0.2));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0; /* Ensure the background is behind the content */
+}
+
+.event-item:hover::before {
+  opacity: 1; /* Fade in the background effect */
+}
+
+.event-item:hover {
+  transform: translateY(-10px) scale(1.05); /* 3D hover effect */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.event-image {
+  position: relative;
+  z-index: 1; /* Ensure the image is above the hover background */
+  width: 310px;
+  height: 260px;
+  border-radius: 12px;
+  margin-bottom: 5px;
+  object-fit: cover;
+}
+
+.event-name {
+  position: relative;
+  z-index: 1; /* Ensure the name is above the hover background */
+  font-size: 25px;
+  font-weight: 800;
+  color: #8a2c2c;
+}
+
+.no-result {
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  height: auto; /* Adjust height based on the desired space */
+  width: 1000px;
+  text-align: center;
+}
+
+.no-result img {
+  width: 580px;
+  height: auto;
+  margin-bottom: 10px; /* Space between the image and the text */
+}
+
+.no-result h2 {
+  font-size: 30px;
+  color: #ff4d4d; /* Neon red */
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  margin-top: 0; /* Remove any margin at the top of the text */
+}
+@media screen and (max-width: 768px) {
+  .booktable {
+    font-size: 1.5rem;
+    left: 50px;
+    top: 13px;
+  }
+
+  .search-bar input {
+    width: 50%;
+    margin-left: 250px;
+  }
+
+  .event-items {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+  }
+
+  .event-item {
+    padding: 12px;
+  }
+
+  .event-name {
+    font-size: 22px;
+  }
+}
+
+/* For screens smaller than 480px (Mobile Devices) */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .booktable {
+    font-size: 1.0rem;
+    top: 15px;
+    left: 20px;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .search-bar input {
+    width: 40%;
+    margin-left: 100px;
+    font-size: 18px;
+  }
+
+  .event-items {
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+    gap: 20px;
+  }
+
+  .event-item {
+    padding: 10px;
+  }
+
+  .event-name {
+    font-size: 20px;
+  }
+
+  .no-result img {
+    width: 100%;
+  }
+
+  .no-result h2 {
+    font-size: 24px;
+  }
+}
+
+/* For smaller mobile screens, below 320px */
+@media screen and (max-width: 320px) {
+  .booktable {
+    font-size: 1.6rem;
+  }
+
+  .event-items {
+    gap: 15px;
+  }
+
+  .event-item {
+    padding: 8px;
+  }
+
+  .event-name {
+    font-size: 18px;
+  }
+
+  .no-result h2 {
+    font-size: 22px;
+  }
+}
