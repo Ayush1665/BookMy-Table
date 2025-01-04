@@ -214,7 +214,7 @@ body {
     border-radius: 12px;
     margin-bottom: 5px;
     object-fit: cover;
-    margin-left: 20px;
+    margin-left: 16px;
   }
   .no-result{
     margin-top: 140px;
@@ -231,7 +231,7 @@ body {
   .event-rating{
     position: absolute;
     top: 285px;
-    right: 55px;
+    right: 50px;
   }
   .search-bar input {
     width: 40%;
