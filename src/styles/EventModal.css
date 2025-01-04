@@ -166,3 +166,60 @@
     opacity: 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 80%;
+    padding: 15px 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5), 0 0 20px #ff00ff;
+  }
+
+  .modal-name {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .event-form label {
+    font-size: 0.9rem;
+    width: 40%;
+  }
+
+  .event-form input,
+  .event-form select {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .confirm-button {
+    font-size: 0.9rem;
+    padding: 8px 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal-content {
+    width: 80%;
+    padding: 10px 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5), 0 0 15px #ff00ff;
+  }
+
+  .modal-name {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .event-form label {
+    font-size: 0.8rem;
+    width: 45%;
+  }
+
+  .event-form input,
+  .event-form select {
+    font-size: 0.8rem;
+    padding: 7px;
+  }
+
+  .confirm-button {
+    font-size: 0.8rem;
+    padding: 7px 15px;
+  }
+}
