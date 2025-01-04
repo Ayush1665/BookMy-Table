@@ -206,6 +206,16 @@ body {
   body {
     font-size: 14px;
   }
+  .event-image{
+    position: relative;
+    z-index: 1;
+    width: 310px;
+    height: 260px;
+    border-radius: 12px;
+    margin-bottom: 5px;
+    object-fit: cover;
+    margin-left: 20px;
+  }
   .no-result{
     margin-top: 140px;
   }
@@ -218,7 +228,11 @@ body {
   .heading {
     font-size: 1.5rem;
   }
-
+  .event-rating{
+    position: absolute;
+    top: 285px;
+    right: 55px;
+  }
   .search-bar input {
     width: 40%;
     margin-left: 130px;
@@ -237,6 +251,7 @@ body {
 
   .event-name {
     font-size: 20px;
+    margin-left: 20px;
   }
 
   .no-result img {
