@@ -293,7 +293,7 @@ const PaymentModal = ({ isOpen, onClose, formData }) => {
               <strong>Name:</strong> {formData.name}
             </p>
             <p>
-              <strong>Booking Date:</strong> {new Date(formData.date).toLocaleDateString()}
+              <strong>Booking Date:</strong> {(formData.date)}
             </p>
             <p>
               <strong>Number of Guests:</strong> {formData.guests}
@@ -317,7 +317,7 @@ const PaymentModal = ({ isOpen, onClose, formData }) => {
               Download PDF
             </button>
             <button className="close-button" onClick={handleCancel}>
-              X
+            ✖
             </button>
           </div>
         </div>

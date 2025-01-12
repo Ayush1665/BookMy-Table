@@ -89,7 +89,7 @@ const EventModal = ({ event, onClose }) => {
             {/* Form inside the modal */}
             <form className="event-form" onSubmit={handleSubmit}>
               <div className="form-group">
-                <label htmlFor="name"> Name*</label>
+                <label htmlFor="name">Enter your Name*</label>
                 <input
                   type="text"
                   id="name"
@@ -101,7 +101,7 @@ const EventModal = ({ event, onClose }) => {
               </div>
               
               <div className="form-group">
-                <label htmlFor="date">Date*</label>
+                <label htmlFor="date">Date of Booking*</label>
                 <select
                   id="date"
                   name="date"
@@ -117,7 +117,7 @@ const EventModal = ({ event, onClose }) => {
               </div>
               
               <div className="form-group">
-                <label htmlFor="time"> Time*</label>
+                <label htmlFor="time"> Time Slot*</label>
                 <select
                   id="time"
                   name="time"
@@ -146,7 +146,7 @@ const EventModal = ({ event, onClose }) => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="occasion">Occasion </label>
+                <label htmlFor="occasion">Occasion (Optional) </label>
                 <select
                   id="occasion"
                   name="occasion"

@@ -164,6 +164,8 @@ body {
   font-weight: bold;
   margin-top: 0; /* Remove any margin at the top of the text */
 }
+
+
 @media screen and (max-width: 768px) {
   .booktable {
     font-size: 1.5rem;
